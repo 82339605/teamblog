@@ -1,0 +1,26 @@
+{% extends 'blog.html' %}
+{% block contents %}
+    <div id="information">
+    <h1 style="height: 40px;">简单而直接的Python</h1>
+    <p style="height: 20px;" id="font-setting">
+        <span>{{ third.author }}</span>
+        <span>{{ third.time }}</span>
+        <span>{{ third.about }}</span>
+    </p>
+    <p class="the-one">
+        简介web.py 是一个Python 的web 框架，它简单而且功能强大。web.py 是公开的，无论用于什么用途都是没有限制的。而且相当的小巧，应当归属于轻量级的web 框架。但这并不影响web.py 的强大，而且使用起来很简单、很直接。
+    </p>
+    <p class="second" style="position: relative;">
+    单 -- Python 是一种代表简单主义思想的语言。阅读一个良好的 Python 程序就感觉像是在读英语一样，尽管这个英语的要求非常严格！Python 的这种伪代码本质是它最大的优点之一。它使你能够专注于解决问题而不是去搞明白语言本身。
+ 易学 -- 就如同你即将看到的一样，Python 极其容易上手。前面已经提到了，Python 有极其简单的语法。
+ 免费、开源 -- Python 是 FLOSS（自由/开放源码软件）之一。简单地说，你可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS 是基于一个团体分享知识的概念。这是为什么 Python 如此优秀的原因之一——它是由一群希望看到一个更加优秀的 Python 的人创造并经常改进着的。
+ 高层语言 -- 当你用 Python 语言编写程序的时候，你无需考虑诸如如何管理你的程序使用的内存一类的底层细节。
+ 可移植性 -- 由于它的开源本质，Python 已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。如果你小心地避免使用依赖于系统的特性，那么你的所有 Python 程序无需修改就可以在下述任何平台上面运行。这些平台包括 Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE 甚至还有 PocketPC、Symbian 以及 Google 基于 Linux 开发的 Android 平台！
+ 解释性 -- 这一点需要一些解释。一个用编译性语言比如 C 或 C++ 写的程序可以从源文件（即 C 或 C++ 语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。当你运行你的程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而 Python 语言写的程序不需要编译成二进制代码。你可以直接从源代码运行程序。
+        <div style="background: orange;width: 60px;height: 30px;
+        position:absolute;bottom:0px;left: 400px;line-height: 30px;text-align: center;"><a href="#" style="color: #000;">点赞</a></div>
+         <div style="background: orange;width: 60px;height: 30px;
+        position:absolute;bottom:0px;left: 600px;line-height: 30px;text-align: center;"><a href="#" style="color: #000;">阅读量</a></div>
+    </p>
+    </div>
+{% endblock %}

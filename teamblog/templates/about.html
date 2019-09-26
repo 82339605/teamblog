@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>关于我的</title>
+		<link rel="stylesheet" href="/static/css/blog.css">
+        <!--<script src="blog.js"></script>-->
+        <style>
+    	html,body{
+				margin:0;
+			}/*定义参照物*/
+		#blog{
+				width:100%;
+				height:40%;
+				/*插入图片*/
+				background-repeat:no-repeat;/*背景图片不重复*/
+				background-size:100% 100%;/*背景图片大小*/
+				background-position:0 0 ;/*图片水平边距  调整图片位置*/
+			}	
+		#d1{
+			margin-top: 30px;
+			margin-left: 100px;
+			width:1150px;
+			height:1000px;
+			background-color: #fff;
+			color:#000;
+			margin-bottom: 30px;
+		}
+		#d2{
+			margin-top:55px;
+			margin-left:200px;
+			width:830px;
+			height:1000px;
+			color:#000;
+			
+		}
+		#banner{
+				margin-top:40px;
+				margin-left:110px;
+				width:230px;
+				height:37px;
+			}
+		#banner>ul>
+		h2{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+		h2{
+				color:#000;
+				text-align:center;
+				height:37px;
+				width:230px;
+				line-height: 30px;
+			}
+		.menu{
+				position:relative;	
+
+			}
+		.menu>li{
+				width:230px;
+				height:37px;
+				background-color:#fff;
+				border-bottom: 10px solid #fff;
+			}
+		.menu>li:hover>h2{
+				background-color: #2E2D2D;
+				color:#000;
+			}
+		#dd{
+			position: absolute;
+			margin-top: -950px;
+			margin-left:-90px;
+		}
+        </style>
+	</head>
+	<body style="background: url('/static/imgs/25.jpeg')">
+	<div id="blog"></div>
+    <div id="nav">
+        <h1>个人博客</h1>
+        <ul>
+            <a href="/"><li>网站首页</li></a>
+            <a href="{% url 'text' %}"><li>文章列表</li></a>
+            <a href="{% url 'luanting' %}"><li>相册</li></a>
+            <a href="{% url 'time' %}"><li>时间轴</li></a>
+            <a href="{%  url 'aboutMy' %}"><li>留言板</li></a>
+            <a href="{% url 'leave' %}"><li>留言</li></a>
+            <a href="/publish/"><li>发表博客</li></a>
+            <a href="{% url 'about' %}"><li>关于我的</li></a>
+    </div>
+    <div id="d1">
+        <div id="banner">
+        	<div id="d2">
+        		<br><br><br>
+        		<h2 color="#000">关于我们</h2>
+		        <hr color="#3F3D3D"  width="400px"><br>
+		        <p>  胜于蓝，排名技术建站，是由90后草根站长，从属于天津智尚互联科技有限公司。lixiongzhao.com门户网站，前期多个改版均属于博客类型，自2018年起，应网粉丝的要求，开始转型发展门户网站，旨在为各位站长，程序员提供免费以及付费的网站模板，包括个人博客网站模板，企业网站模板，门户类型网站模板。除此之外，网站还会以发布文章或者视频的方式分享实用的建站教程。</p>
+<br><br><br><br><br><br>
+        	<h2>内心独白</h2>
+        	<hr color="#3F3D3D"  width="400px"><br>
+        	<p>  我的个人博客搜索“个人博客”、“博客”，一直都靠前。最有意思的是，我有三年的时间没有去更新它，依然排在前面。虽然期间有很多的不容易，但是我都没有放弃过。选了这一行 ，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了前端设计，喜欢坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来。<br>
+
+   很感谢我的大学老师，他带我入了行，也给我带来毕业后的第一个大单，从网站的搭建到运行，虽然我只负责前端，但从那以后，因为这一单，我很顺利的找到了工作，正式进入了互联网，从一个新闻编辑到前端设计，再到独立完成建站，大大小小的的网站，无论是内网还是外网，好几百个网站，政府类型做得最多，也是我最擅长的，但随着政府网站统一建站后，我开始接企业类型网站、个人博客类型网站。我的个人博客网站，其实是我平时工作状态的一个小缩影。<br><br>
+
+  通过这个博客网站，我用它记录学习和生活的点点滴滴，我勉励自己，一定不能偷懒，学无止境。通过这个博客网站，我认识了很多朋友，互联网将我们团聚在一起，我们共同探讨建站，共同探讨运营，闲暇时，还聊聊家常，不仅增长技术，还可以释放压力。通过这个博客网站，我重新规划了自己的职业，我善待我的每一个客户，如果是正在学习的学生，我希望我写的模板，能帮到他们，少走一些弯路，而不是直接粘贴复制。对于专做优化SEO，SEM的客户，我希望我的程序，能够帮到他们在竞争中脱颖而出。好内容的网站，我也会全力的去推广。
+</p><br><br><br><br><br><br><br><br> <br><br><br><br> <br><br><br><br>        	
+        	<h2>网站创建信息</h2>
+        	<hr color="#3F3D3D"  width="400px"><br>
+
+  创建时间：2011年01月12日<br><br>
+
+  主题模板：《青于蓝》<br><br>
+
+  网站程序：帝国CMS7.5<br><br>
+
+ 服务器: 阿里云 建站流程<br><br>
+        	</div>
+<div id="dd">
+			<ul class="menu">
+				<li>
+					<h2> <a href="#" style="color:black;">关于我们</a></h2>
+				</li>
+				<li>
+					<h2> <a href="#" style="color:black;">联系我们</a></h2>
+				</li>
+				<li>
+					<h2> <a href="#" style="color:black;">帮助问答</a></h2>
+				</li>
+			</ul>	
+		</div>
+		</div>
+	</div>
+
+	</body>
+</html>

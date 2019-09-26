@@ -1,0 +1,21 @@
+{% extends 'blog.html' %}
+{% block contents %}
+    <div id="information">
+    <h1 style="height: 40px;">简单而直接的Python</h1>
+    <p style="height: 20px;" id="font-setting">
+        <span>{{ first.author }}</span>
+        <span>{{ first.time }}</span>
+        <span>{{ first.about }}</span>
+    </p>
+    <p class="the-one">
+        简介web.py 是一个Python 的web 框架，它简单而且功能强大。web.py 是公开的，无论用于什么用途都是没有限制的。而且相当的小巧，应当归属于轻量级的web 框架。但这并不影响web.py 的强大，而且使用起来很简单、很直接。
+    </p>
+    <p class="second" style="position: relative;">
+        From：https://www.oschina.net/question/5189_4306 From：https://www.oschina.net/question/5189_4306 Web.py Cookbook 简体中文版：http://webpy.org/cookbook/index.zh-cn web.py 0.3 新手指南：http://webpy.org/docs/0.3/tutorial.zh-cn webpy 官网文档：http://webpy.org/ web.py 十分钟创建简易博客：http://blog.csdn.net/freeking101/article/details/53020728 web.py 是一个Python 的web 框架，它简单而且功能强大。web.py 是公开的，无论用于什么用途都是没有限制的。而且相当的小巧，应当归属于轻量级的web 框架。但这并不影响web.py 的强大，而且使用起来很简单、很直接。在实际应用上，web.py 更多的是学术上的价值，因为你可以看到更多web 应用的底层，这在当今“抽象得很好”的web 框架上是学不到的 ：） 如果想了解更多web.py，可以访问web.py 的官方文档。 先感受一下web.py 的简单而强大： 上面就是一个基于web.py 的完整的Web 应用。将上面的代码保存为文件code.py，在命令行下执行python code.py。然后打开你的浏览器，打开地址：http://localhost:8080 或者 http://localhost:8080/test 没有意外的话(当然要先安装web.py，下面会有介绍)，浏览器会显示“Hello, world”或者 “Hello, test”。 1. 安装 下载 web.py 的安装文件，将下载得到的文件 web.py 解压，进入解压后的文件夹，在命令行下执行：python setup.py install，在Linux 等系统下，需要root 的权限，可以执行：sudo python setup.py install。 2. URL 处理 对于一个站点来说，URL 的组织是最重要的一个部分，因为这是用户看得到的部分，而且直接影响到站点是如何工作的，例如：www.baidu.com ，其URLs 甚至是网页界面的一部分。而web.py 以简单的方式就能够构造出一个强大的URLs。 在每个web.py 应用，必须先import web 模块：
+        <div style="background: orange;width: 60px;height: 30px;
+        position:absolute;bottom:0px;left: 400px;line-height: 30px;text-align: center;"><a href="#" style="color: #000;">点赞</a></div>
+         <div style="background: orange;width: 60px;height: 30px;
+        position:absolute;bottom:0px;left: 600px;line-height: 30px;text-align: center;"><a href="#" style="color: #000;">阅读量</a></div>
+    </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'blog.html' %}
+{% block contents %}
+     <div class="inner_content" style="height: 700px;float: left;">
+        <form action="{% url 'leave' %}" method="post">
+            {% csrf_token %}
+            <div id="wrap">
+            <div id="content_view">
+            <ul id="height-error" style="position: relative;">
+              <li style="height: 100px;">
+                博客号：<input name="number" type="text" id="userName" style="height: 30px;"/>
+              </li>
+              <li style="height: 100px;">
+               <p>留言：</p><textarea name="text" id="content"cols="30" rows="10"style="height: 300px;">
+              </textarea>
+              </li>
+              <li>
+              </li>
+            </ul>
+            </div>
+            </div>
+            <button type="submit" style="height: 30px;margin-top: 500px;margin-left: 300px;">submit</button>
+        </form>
+    <div id="comment_list">
+    <h2 style="height: 100px;position: absolute; bottom: 0px;left: 200px;">最新评论...</h2>
+    </div>
+    </div>
+{% endblock %}

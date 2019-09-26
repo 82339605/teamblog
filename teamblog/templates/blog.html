@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>毛の博客</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <link rel="stylesheet" href="/static/css/leave.css">
+    <script src="/static/js/blog.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <h1>团队博客</h1>
+        <ul>
+            <a href="/"><li>网站首页</li></a>
+            <a href="{% url 'text' %}"><li>文章列表</li></a>
+            <a href="{% url 'luanting' %}"><li>相册</li></a>
+            <a href="{% url 'time' %}"><li>时间轴</li></a>
+            <a href="{%  url 'aboutMy' %}"><li>留言板</li></a>
+            <a href="{% url 'leave' %}"><li>留言</li></a>
+            <a href="/publish/"><li>发表博客</li></a>
+            <a href="{% url 'about' %}"><li>关于我的</li></a>
+        </ul>
+        {% if not user %}
+            <a href="/login/" class="login" target="_blank">登录</a>
+            <a href="/register/" class="register" target="_blank">注册</a>
+            {% else %}
+            <a class="login">欢迎:{{user.loginname}}</a>
+            <a href="/logout/" class="register">退出</a>
+        {% endif %}
+
+    </div>
+{% block note %}
+    <div id="content">
+    {% block contents %}
+        <div id="first">
+            <div id="banner">
+                <img src='/static/imgs/t1.png' id='pic1'>
+                <img src='/static/imgs/t2.png'>
+                <img src='/static/imgs/t3.png'>
+            </div>
+            <div class="right-list">
+                <p id="p1">
+                    <a href="{% url 'tarena' %}">
+                        <p2 class="blur">linux升级pip3，安装pip</p2>
+                        <img src="/static/imgs/t4.jpg">
+                    </a>
+                </p>
+                <p id="p2">
+                   
+                    <a href="#">
+                            <p2 class="blur">安装selenium，爬取网站数据</p2>
+                        <img src="/static/imgs/t5.jpg">
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="message">
+                {% for i in message %}
+                    <div class="information">
+                        <a href="/info{{ forloop.counter }}" style="color:black;"><h2>超级厉害的django框架{{ forloop.counter }}</h2></a>
+                        <div class="left-text">
+                            <p>
+                            <a href="#">
+                                <img src="{{ i.imgs }}" alt="">
+                            </a>
+                            </p>
+                        </div>
+                        <div class="right-text">
+                            <p> From：https://www.oschina.net/question/5189_4306 Web.py Cookbook 简体中文版：http://webpy.org/cookbook/index.zh-cn web.py 0.3 新手指南：http://webpy...</p>
+                        </div>
+                        <ul>
+                            <a href="#"><li>{{ i.id }}</li></a>
+                            <a href="#"><li>{{ i.author }}</li></a>
+                            <a href="#"><li>{{ i.time }}</li></a>
+                            <a href="#"><li>{{ i.about }}</li></a>
+                            <a href="#"><li>{{ i.reason }}</li></a>
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+         {% endblock %}
+            <div id="recommed">
+                <h3>推荐文章</h3>
+                <p class="p">
+                    
+                    <p2 class="bottom-blur">安装selenium，爬取网站数据</p2>
+                    <button>阅读</button>
+                    <a href="#"><img src="/static/imgs/t12.jpg" alt=""></a>
+                   
+                </p>
+                <ul class="rtext">
+                    <li>
+                        <a href="{% url 'note1' %}" class="girl"><img src="/static/imgs/t14.jpg"></a>
+                        <p class="python"><a href="{% url 'note1' %}">c#学习笔记以及网址</a></p>
+                        <p class="time">2018-09-09</p>
+                    </li>
+                    <li>
+                        <a href="{% url 'note2' %}" class="girl"><img src="/static/imgs/t13.jpg"></a>
+                        <p class="python"><a href="{% url 'note2' %}">c++学习笔记以及网址</a></p>
+                        <p class="time">2018-09-09</p>
+                    </li>
+                    <li>
+                        <a href="{% url 'note' %}" class="girl"><img src="/static/imgs/t12.jpg"></a>
+                        <p class="python"><a href="{% url 'note' %}">爬虫学习笔记以及网址</a></p>
+                        <p class="time">2018-09-09</p>
+                    </li>
+                    <li>
+                        <a href="{% url 'note3' %}" class="girl"><img src="/static/imgs/t11.jpg"></a>
+                        <p class="python"><a href="{% url 'note3' %}">java学习笔记以及网址</a></p>
+                        <p class="time">2018-09-09</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    {% for i in topic %}
+        <div id="blog-information">
+            <h3 class="title">{{ i.title }}</h3>
+            <div class="image"><img src="{{ i.imgs }}" alt=""></div>
+            <span class="msg">{{ i.content }}</span>
+            <p class="data">
+                <span>{{ i.select }}</span>
+                <span>{{ i.justOne }}</span>
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
+</body>
+</html>

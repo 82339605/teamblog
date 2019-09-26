@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  #wrap {
+    width: 600px;
+    background:rgb(200,200,200);
+    margin-left: 200px;
+    padding: 10px;
+    height: 620px;
+  }
+  li{
+    list-style:none;
+  }
+  #height-error{
+      height: 580px;
+  }
+  #content_view {
+    padding: 10px;
+  }
+  #content_view li
+  {
+    padding: 10px 0;
+    line-height: 22px;
+  }
+  #content_view #userName {
+    height: 30px;
+    width: 520px;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  #content_view #content {
+    width: 520px;
+    height: 100px;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  #content_view #submit {
+    width: 100px;
+    height: 30px;
+    border: 1px solid gray;
+    background: white;
+    position: relative;
+    left: 48px;
+    font-size: 16px;
+  }
+  #comment_list h2 {
+    margin-top: 10px;
+  }
+  #comment_list h3 {
+    padding: 10px;
+    background: mistyrose;
+  }
+  #comment_list p{
+    padding: 10px;
+    font-size: 14px;
+    text-indent: 2em;
+  }
+  #comment_list a {
+  text-decoration: none;
+  float: right;
+  top: 20px;
+  }

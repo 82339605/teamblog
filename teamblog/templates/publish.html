@@ -1,0 +1,25 @@
+{% extends 'blog.html' %}
+{% block contents %}
+    <div id="title">发表博客</div>
+    <hr style="margin-bottom:20px;">
+    <div id="left-form">
+        <form action="{% url 'publish' %}" method="post" class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" placeholder="文章标题" name="title">
+            <lable for="blog">个人博客</lable><input type="radio" id="blog" name="justOne" value="个人博客">
+            <lable for="blog2">公开博客</lable><input type="radio" id="blog2" name="justOne" value="公开博客">
+            <lable for="blog3">其他博客</lable><input type="radio" id="blog3" name="justOne" value="其他博客">
+            <input type="file" name="file">
+            <select name="select" id="select" style="margin-top: 10px">
+                <option value="python">python</option>
+                <option value="java">java</option>
+                <option value="php">php</option>
+                <option value="go">go</option>
+            </select>
+
+            <textarea id="editor" style=" display: block; height: 150px;margin-top: 10px;" cols="90" name="message"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    <div id="right-pic"></div>
+{% endblock %}
